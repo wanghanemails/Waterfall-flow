@@ -1,0 +1,22 @@
+body {
+  background-color: aliceblue; }
+  body #main {
+    position: relative;
+    font-size: 0px; }
+    body #main .box {
+      /* display: inline-block;
+       -webkit-text-size-adjust:none;*/
+      padding: 15px 0 0 15px;
+      float: left;
+      background-color: aliceblue; }
+      body #main .box .pic {
+        padding: 10px;
+        border: 1px solid #cccccc;
+        box-shadow: 0px 0px 5px #ccc;
+        border-radius: 5px;
+        -webkit-text-size-adjust: none; }
+        body #main .box .pic img {
+          width: 200px;
+          height: auto; }
+
+/*# sourceMappingURL=index.css.map */
