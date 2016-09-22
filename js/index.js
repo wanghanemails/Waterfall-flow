@@ -9,14 +9,15 @@ window.onload=function (){
     //        2 运行到地方加载
     //        3 循环多个 无限下拉
 
-    //for(var j = 0 ;j<100;j++ ){
-    //    addapend();
-    //}
-
 
 
 
     waterfall('main','box');
+
+    window.onscroll = function () {
+
+        
+    }
 }
 
 
@@ -44,15 +45,16 @@ window.onload=function (){
         var heightArr = new Array();
         for(var i=0;i<oBoxs.length;i++){
             if(i<columns){
+                //前(列数)张
                 heightArr.push(oBoxs[i].offsetHeight)
             }
             else{
-                var minHeight = Math.min.apply(null,heightArr);
-                console.log(minHeight)
+                var minHeight = Math.min.apply(null,heightArr);//min  只接受a,b,c,d,的参数
                 var index  =    getFirstMinHIndex(heightArr,minHeight);
                 //
                 //console.log(11,index)
                 //console.log(22,oBoxs[i].offsetWidth*index);
+                //
                 oBoxs[i].style.position="absolute";
                 oBoxs[i].style.top=minHeight+"px";
                 // oBoxs[i].style.left= oBoxs[i].offsetWidth*index;
@@ -93,17 +95,17 @@ window.onload=function (){
     }
 
     function addapend(){
-       var img =  docuement.createElement("img");
+        var img =  document.createElement("img");
 
         img.src = "images/"+Math.floor(Math.random()*10)+".jpg";
 
-        var pic = docuement.createElement("div");
+        var pic = document.createElement("div");
         pic.className = "pic";
 
         pic.appendChild(img);
 
-        var box = docuement.createElement("div");
-        box.className = "box";
+        var box = document.createElement("div");
+        box.className = "box test";
 
         box.appendChild(pic);
 
